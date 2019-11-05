@@ -7,6 +7,10 @@ import (
 	"github.com/urfave/cli"
 )
 
+func initial() {
+	fmt.Print("aaaaaa\n")
+}
+
 func main() {
 	app := cli.NewApp()
 	app.Name = "maestrocli"
@@ -18,7 +22,7 @@ func main() {
 			Name:  "init",
 			Usage: "initialize server information",
 			Action: func(c *cli.Context) error {
-				fmt.Printf("aaaa\n")
+        initial()
 				return nil
 			},
 		},
