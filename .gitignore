@@ -17,3 +17,4 @@
 !client/*.sum
 !client/README.md
 !client/Makefile
+!setting.json

@@ -1,4 +1,4 @@
-SRC=main.go
+SRC=main.go setting/*go command/*.go
 
 maestrocli: $(SRC)
 	go build 

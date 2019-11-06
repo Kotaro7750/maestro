@@ -1,15 +1,12 @@
 package main
 
 import (
-	"fmt"
+	"maestrocli/command"
+	"maestrocli/setting"
 	"os"
 
 	"github.com/urfave/cli"
 )
-
-func initial() {
-	fmt.Print("aaaaaa\n")
-}
 
 func main() {
 	app := cli.NewApp()
@@ -22,7 +19,15 @@ func main() {
 			Name:  "init",
 			Usage: "initialize server information",
 			Action: func(c *cli.Context) error {
-        initial()
+				setting.Initial()
+				return nil
+			},
+		},
+		{
+			Name:  "hello",
+			Usage: "hello",
+			Action: func(c *cli.Context) error {
+				command.Hello()
 				return nil
 			},
 		},
